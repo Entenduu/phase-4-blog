@@ -36,6 +36,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   def destroy
     @post.destroy
+    head :no_content
   end
 
   private

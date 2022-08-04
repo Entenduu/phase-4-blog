@@ -11,16 +11,16 @@ function App() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-  
-      fetch("/posts").then((r) => {
-          if (r.ok) {
-          r.json().then(setPosts);
-          }
-      });
+    getData()  
   }, []);
 
- 
-
+  function getData(){
+    fetch("/posts").then((r) => {
+      if (r.ok) {
+        r.json().then(setPosts);
+      }
+    });
+  }
 
   useEffect(() => {
     // auto-login
@@ -37,7 +37,7 @@ function App() {
       <main>
         {user ? (
           <Routes>
-            <Route path="/" element={<Home posts={posts} user={user}/>}/>
+            <Route path="/" element={<Home posts={posts} user={user} setPosts={setPosts} getData={getData}/>}/>
           </Routes>
         ) : (
           <Routes>

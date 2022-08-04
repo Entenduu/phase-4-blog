@@ -1,15 +1,17 @@
 import Adbar from "./AdBar";
+import DisplayPosts from "./DisplayPosts";
 import NewPost from "./NewPost";
 import TopicsBar from "./TopicsBar";
 
-function Home({ user, posts }) {
+function Home({ user, posts, setPosts, getData }) {
 
     if (user) {
         return (
             <div>
                 <TopicsBar posts={posts}/>
                 <Adbar/>
-                <NewPost posts={posts} user={user}/>
+                <NewPost posts={posts} user={user} setPosts={setPosts} getData={getData}/>
+                <DisplayPosts posts={posts} user={user} getData={getData}/>
             </div>
         )
     } else {

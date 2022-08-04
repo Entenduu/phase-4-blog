@@ -142,3 +142,18 @@ height: 30px;
   width: 200px;
 }
 
+.posts{
+  text-align: center;
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.posts div:hover{
+  background-color: #ccc;
+  color: black;
+}
+.post{
+  border-style: double;
+  border: 1px solid black;
+  height: 170px;
+}
