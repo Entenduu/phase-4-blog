@@ -31,9 +31,22 @@ function Edit({user, e}){
     
         <div className='edit-form'>
             <form onSubmit={(e) => handleSubmit(e)}>
-                <input type='text' value={title} onChange={(e)=> setTitle(e.target.value)} >
+                <label htmlFor='edit-title'>Edit Title:</label><br></br>
+                <input 
+                    className="edit-title-container"
+                    type='text' 
+                    value={title} 
+                    placeholder="edit title here"
+                    onChange={(e)=> setTitle(e.target.value)} >
                 </input>
-                <input type='text' value={content} onChange={(e)=> setContent(e.target.value)}>
+                <br></br>
+                <label  htmlFor='edit-content'>Edit Content:</label>
+                <input 
+                    className="edit-content-container"
+                    type='text' 
+                    placeholder="edit your content here"
+                    value={content} 
+                    onChange={(e)=> setContent(e.target.value)}>
                 </input>
                 <button type='submit'>Submit</button>
             </form>

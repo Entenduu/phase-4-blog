@@ -50,18 +50,19 @@ code {
 
 .login {
   height: 100px;
-    width: 400px;
-    background-color: rgba(255,255,255,0.13);
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
-    text-align: center;
+  width: 400px;
+  background-color: rgba(255,255,255,0.13);
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  
+  padding: 50px 35px;
+  text-align: center;
 }
 
 
@@ -73,6 +74,7 @@ code {
   background-image: url('https://wallpaperaccess.com/full/435928.jpg');
   
 }
+
 
 .background-div{
   position: absolute;
@@ -125,17 +127,26 @@ input{
 
 
 .post-form{
-  border-style: ridge;
-  height:150px;
+  border-style: none;
+  height:auto;
+  /* background-color: green; */
+  padding: 20px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 
 }
 
 .input-field{
 position: center;
+text-align: center;
 }
 .content-input{
-  width: 700px;
+width: 500px;
 height: 30px;
+
 }
 
 .select{
@@ -146,20 +157,46 @@ height: 30px;
   text-align: center;
   overflow-y: scroll;
   height: 500px;
+  column-gap: 20px;
 }
 
 .posts div:hover{
   background-color: #ccc;
   color: black;
+ 
 }
 .post{
   border-style: double;
   border: 1px solid black;
+  border-radius: 20px;
   height: 170px;
+  padding-bottom: 20px;
+  /* background-color: pink;  */
+  justify-content: space-between;
+  
+   
 }
 
 
 .edit-form{
   z-index: 100%;
   color:black;
+  position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  width:300px;
+  height: 20px;
 }
+
+/* .edit-title-container{
+  width:300px;
+  height: 20px;
+
+}
+
+.edit-content-container{
+  width: 300px;
+  height: 300px;
+} */

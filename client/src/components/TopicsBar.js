@@ -10,7 +10,7 @@ function TopicsBar({posts}){
             <div className="wrapper">
                     <div className="search-wrapper">
                         <div className="vertical-menu">
-                            <a href="/" className="active">Topics</a>
+                            <a href="/" className="active">Genre</a>
                             {genres}
                         </div>
                     </div>

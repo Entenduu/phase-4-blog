@@ -37,9 +37,11 @@ function NewPost({user, posts, getData, setReload}) {
         <div>
             
             <form className="post-form" onSubmit={handleSubmit}>
-            {user.username}
                 <div className="input-field">
-                    <label htmlFor='title'>Title:</label>
+                        <span>Signed in as {user.username}</span>
+                    <h4>Create a new post here!</h4>
+    
+                    <label htmlFor='title'>Title:</label><br></br>
                     <input 
                             type='text' 
                             name='title' 
@@ -48,7 +50,7 @@ function NewPost({user, posts, getData, setReload}) {
                             placeholder="title"
                             onChange={(e)=>setTitle(e.target.value)}
                         /><br></br>
-                    <label htmlFor='content'> New post: </label>
+                    <label htmlFor='content'> New post: </label><br></br>
                     <input 
                         type='text' 
                         name='content' 
@@ -58,7 +60,7 @@ function NewPost({user, posts, getData, setReload}) {
                         onChange={(e)=>setContent(e.target.value)}
                     /><br></br>
                     
-                    <label htmlFor='genre'> Select Genre: </label>
+                    <label htmlFor='genre'> Select Genre: </label><br></br>
                     <select className="select" value={genre} onChange={(e) => setGenre(e.target.value)}>
                         {genres}
                     </select>
