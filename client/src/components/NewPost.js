@@ -2,7 +2,7 @@ import {React, useState, useEffect} from "react";
 
 
 
-function NewPost({user, posts, getData}) {
+function NewPost({user, posts, getData, setReload}) {
     let unique = [...new Set(posts.map(post => post.genre))];
     console.log(unique)
     let genres = unique.map(x => <option value={x} key={x}>{x}</option>)
@@ -26,7 +26,7 @@ function NewPost({user, posts, getData}) {
             title
         }),
         }).then(r => r.json())
-        .then(getData())
+    
         setGenre(genres[0])
         setContent('')
         setTitle('')

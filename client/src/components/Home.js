@@ -3,15 +3,15 @@ import DisplayPosts from "./DisplayPosts";
 import NewPost from "./NewPost";
 import TopicsBar from "./TopicsBar";
 
-function Home({ user, posts, setPosts, getData }) {
+function Home({ user, posts, setPosts, getData, handleClickE, setReload }) {
 
     if (user) {
         return (
             <div>
                 <TopicsBar posts={posts}/>
                 <Adbar/>
-                <NewPost posts={posts} user={user} setPosts={setPosts} getData={getData}/>
-                <DisplayPosts posts={posts} user={user} getData={getData}/>
+                <NewPost posts={posts} user={user} setPosts={setPosts} getData={getData} setReload={setReload}/>
+                <DisplayPosts posts={posts} user={user} getData={getData} handleClickE={handleClickE}/>
             </div>
         )
     } else {

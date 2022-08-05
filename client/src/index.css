@@ -157,3 +157,9 @@ height: 30px;
   border: 1px solid black;
   height: 170px;
 }
+
+
+.edit-form{
+  z-index: 100%;
+  color:black;
+}
